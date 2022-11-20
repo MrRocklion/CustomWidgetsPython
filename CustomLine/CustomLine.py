@@ -48,7 +48,10 @@ class PyLineEdit(QLineEdit):
             self.setText(text)
         if place_holder_text:
             self.setPlaceholderText(place_holder_text)
-            color = "#566573"
+            if text == '':
+                color = "#566573"
+            else:
+                color = "#FFF"
 
         # SET STYLESHEET
         self.set_stylesheet(
